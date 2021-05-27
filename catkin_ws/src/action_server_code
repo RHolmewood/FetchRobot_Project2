@@ -1,0 +1,24 @@
+Alistair Higgins, Lachlan Dunn, Reece Holmewood
+
+This code is run in the command prompt during the perception stage to deliver the node goal for the find_objects result into RVIZ for visualisation. This result is then used to inform the pick_and_place.launch about its worktop and the manipulable objects.
+
+First, run:
+
+rostopic echo /basic_grasping_perception/find_objects/result
+
+
+Second, run:
+
+rostopic pub /basic_grasping_perception/find_objects/goal grasping_msgs/FindGraspableObjectsActionGoal "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: 'base_link'
+goal_id:
+  stamp:
+    secs: 0
+    nsecs: 0
+  id: ''
+goal:
+  plan_grasps: false"
