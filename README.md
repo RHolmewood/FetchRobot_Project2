@@ -21,7 +21,7 @@ We would like to acknowledge Alberto Ezquerro of TheConstruct for his RBKairos r
 6. motion_planning_program.py: short python program to test movement of the robot in gazebo/rviz but with no grasping involved.
 7. basic_grasping_perception_dbg.launch: initialises the simple_grasping ros topics for utilisation in rviz.
 8. fetch_planning_execution.launch: file that launches the moveit.rviz for this project. Has issues loading the rviz file and this may need to be done manually through snc_fetch/launch/moveit.rviz in RVIZ.
-9. pick_and_place.launch: Adapted version of Michael Ferguson's code that perceives and grasps objects in the fetch robot environment using the aforementioned grasping ros topic to identify said objects.
+9. pick_and_place.launch: Adapted version of Michael Ferguson's code that calls the python file pick_and_place.py that perceives and grasps objects in the fetch robot environment using the aforementioned grasping ros topic to identify said objects.
 
 
 #Structure of code
@@ -49,4 +49,3 @@ in the RVIZ window. This should now display the robot with the 3D point cloud vi
 
 10. Visualise the experiment either in Gazebo to watch the robot react in real time, in terminal to see the code pass through its iterative grasping, or in RVIZ to see a representation of the graspable objects actively update itself with each completed pick and place movement.
 
-11.
